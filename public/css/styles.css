@@ -188,6 +188,7 @@ body {
   border-radius: 20px;
   position: relative;
   color: #212529;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 }
 
 .message--cont::after {
@@ -266,6 +267,7 @@ textarea {
   resize: none;
   width: 70%;
   height: 80px;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 }
 
 hr {
