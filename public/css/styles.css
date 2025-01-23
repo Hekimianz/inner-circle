@@ -61,6 +61,7 @@ body {
 .register--btn:hover {
   transform: translateY(-2px);
   box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  font-weight: 500;
 }
 
 .log--btn:active,
@@ -97,4 +98,29 @@ footer a:hover {
   color: #a7c957;
   font-size: 1.1rem;
   text-decoration: underline;
+}
+
+@media screen and (min-width: 768px) {
+  .logo {
+    width: 180px;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .logo {
+    width: 220px;
+    margin-top: 50px;
+  }
+
+  .btns--section {
+    margin-top: 40px;
+    gap: 20px;
+  }
+
+  .log--btn,
+  .register--btn {
+    width: 100px;
+    font-size: 1.4rem;
+    padding: 0.8rem 0;
+  }
 }
