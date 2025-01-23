@@ -16,13 +16,32 @@
   <body>
     <img class="logo" src="images/logo.png" alt="logo" />
     <div class="main--content">
+      <% if(!user) {%>
       <div class="btns--section">
         <a href="/log-in"><button class="log--btn">Log In</button></a>
         <a href="/register"><button class="register--btn">Register</button></a>
       </div>
+      <%} else {%>
+      <a class="logout--btn" href="/log-out">Log Out</a>
+      <% };%>
       <hr />
 
-      <section class="messages--cont"></section>
+      <section class="messages--cont">
+        <% messages.forEach(message => {%> <%- include("partials/message",
+        {message: message, user: user || false}) %> <% })%>
+      </section>
+
+      <% if(user) {%>
+      <hr />
+      <form class="send--form" action="/" method="POST">
+        <textarea
+          name="message"
+          id="message"
+          placeholder="Type message here"
+        ></textarea>
+        <button class="send--btn">Send</button>
+      </form>
+      <% };%>
     </div>
     <%- include("partials/footer") %>
   </body>

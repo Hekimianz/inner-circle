@@ -1,0 +1,12 @@
+<section class="message--cont">
+  <div class="message--horizontalcont">
+    <div class="profile--pic"><img src="/images/profile.png" /></div>
+    <div class="message--verticalcont">
+      <span class="message--username">
+        <% if(user){%> <%= message.username %> <%} else { %> ***** <% } %>
+      </span>
+      <span class="message--date"><%= message.date%></span>
+    </div>
+  </div>
+  <p class="message--text"><%=message.content%></p>
+</section>

@@ -15,7 +15,20 @@
   </head>
   <body>
     <div class="main--content">
-      <h1>Log in page</h1>
+      <h1 class="page--title">Log in</h1>
+      <hr />
+      <form class="login--form" action="/log-in" method="POST">
+        <div class="input--field">
+          <label for="username">Username:</label>
+          <input type="text" name="username" id="username" />
+        </div>
+        <div class="input--field">
+          <label for="password">Password:</label>
+          <input type="text" name="password" id="password" />
+        </div>
+        <button class="loginform--btn">Log in</button>
+        <a href="/" class="backHome--a">Go back</a>
+      </form>
     </div>
     <%- include("partials/footer") %>
   </body>
