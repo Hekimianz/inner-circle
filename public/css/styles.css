@@ -1,0 +1,100 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 64.5%;
+  color: #fff;
+}
+
+body,
+html {
+  height: 100%;
+  width: 100%;
+}
+
+body {
+  background-color: #212529;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-family: "Poppins", serif;
+  justify-content: space-between;
+  min-height: 100vh;
+}
+
+.main--content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+
+.logo {
+  width: 150px;
+  margin-top: 20px;
+}
+
+.btns--section {
+  margin-top: 20px;
+  display: flex;
+  gap: 10px;
+}
+
+.log--btn,
+.register--btn {
+  width: 70px;
+  cursor: pointer;
+  padding: 0.5rem 0;
+  border-radius: 4px;
+  border: none;
+  font-family: inherit;
+  background-color: #a7c957;
+  color: #212529;
+  transition: 0.3s all ease;
+}
+
+.log--btn:hover,
+.register--btn:hover {
+  transform: translateY(-2px);
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+.log--btn:active,
+.register--btn:active {
+  transform: translateY(2px);
+  background-color: #8ba748;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset,
+    rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
+}
+
+hr {
+  background-color: #fff;
+  border: none;
+  height: 1px;
+  width: 100%;
+  margin-top: 20px;
+}
+
+footer {
+  width: 100%;
+  text-align: center;
+  padding: 0.5rem;
+  background-color: #343a40;
+  color: #fff;
+}
+
+footer a {
+  text-decoration: none;
+  color: #fff;
+  transition: 0.2s all ease;
+}
+
+footer a:hover {
+  color: #a7c957;
+  font-size: 1.1rem;
+  text-decoration: underline;
+}
