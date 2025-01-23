@@ -24,8 +24,11 @@
         </div>
         <div class="input--field">
           <label for="password">Password:</label>
-          <input type="text" name="password" id="password" />
+          <input type="password" name="password" id="password" />
         </div>
+        <% errors.forEach(error => {%>
+        <span class="error"><%= error.msg%></span>
+        <%})%>
         <button class="registerform--btn">Register</button>
         <a href="/" class="backHome--a">Go back</a>
       </form>

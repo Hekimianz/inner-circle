@@ -21,11 +21,12 @@ const validateInput = [
     .withMessage("Password must be at least 6 characters long"),
 ];
 
-router.get("/", (req, res) => res.render("register"));
+router.get("/", (req, res) => res.render("register", { errors: [] }));
 
 router.post("/", validateInput, async (req, res) => {
   const errors = validationResult(req);
   if (!errors.isEmpty()) {
+    console.log(errors.array());
     return res.status(400).render("register", { errors: errors.array() });
   }
 
